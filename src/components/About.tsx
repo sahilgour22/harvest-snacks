@@ -18,7 +18,7 @@ export default function About() {
             { threshold: 0.1 }
         );
 
-        const elements = sectionRef.current?.querySelectorAll('.fade-up');
+        const elements = sectionRef.current?.querySelectorAll('.reveal');
         elements?.forEach((el) => observer.observe(el));
 
         return () => observer.disconnect();
@@ -29,7 +29,7 @@ export default function About() {
             <div className="about-container">
 
                 {/* SUBSECTION 1: OUR STORY */}
-                <div className="about-story-hero fade-up">
+                <div className="about-story-hero reveal">
                     <span className="about-eyebrow">Our Story</span>
                     <h2 className="about-heading">
                         Restoring the Connection with Real Food
@@ -42,7 +42,7 @@ export default function About() {
                 {/* SUBSECTION 2: OUR VALUES & NUTRITION */}
                 <div className="about-grid-features">
                     {/* Values Card */}
-                    <div className="feature-card fade-up">
+                    <div className="feature-card reveal">
                         <h3 className="feature-title">Our Values</h3>
                         <div className="values-list">
                             <div className="value-row">
@@ -82,7 +82,7 @@ export default function About() {
                     </div>
 
                     {/* Nutrition card */}
-                    <div className="feature-card feature-card-green fade-up">
+                    <div className="feature-card feature-card-green reveal">
                         <h3 className="feature-title">Nutritional Powerhouse</h3>
                         <div className="nutrition-grid">
                             <div className="nutrition-item">
@@ -107,23 +107,23 @@ export default function About() {
 
                 {/* SUBSECTION 3: FROM FARM TO PACK */}
                 <div className="about-process-section">
-                    <div className="about-sub-heading fade-up">
+                    <div className="about-sub-heading reveal">
                         <h3 className="about-sub-title">From Farm to Pack</h3>
                         <p className="about-sub-description">Our transparent manufacturing process ensures you get nothing but the best.</p>
                     </div>
 
                     <div className="about-process-grid">
-                        <div className="process-card fade-up">
+                        <div className="process-card reveal">
                             <span className="process-icon">🌱</span>
                             <h4>Sourcing</h4>
                             <p>Direct from certified organic farms focusing on ethical practices.</p>
                         </div>
-                        <div className="process-card fade-up" style={{ transitionDelay: '0.1s' }}>
+                        <div className="process-card reveal" style={{ transitionDelay: '0.1s' }}>
                             <span className="process-icon">🔥</span>
                             <h4>Roasting</h4>
                             <p>Slow roasted in small batches to ensure the perfect crunch and nutrient lock.</p>
                         </div>
-                        <div className="process-card fade-up" style={{ transitionDelay: '0.2s' }}>
+                        <div className="process-card reveal" style={{ transitionDelay: '0.2s' }}>
                             <span className="process-icon">📦</span>
                             <h4>Packaging</h4>
                             <p>Oxygen-removed sealing to keep the snacks fresh without any chemicals.</p>

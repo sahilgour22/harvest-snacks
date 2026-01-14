@@ -1,8 +1,18 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import './Recipes.css';
 
-const recipes = [
+interface Recipe {
+    id: number;
+    title: string;
+    time: string;
+    servings: string;
+    image: string;
+    description: string;
+}
+
+const recipes: Recipe[] = [
     {
         id: 1,
         title: 'Spicy Masala Makhana',
@@ -30,11 +40,31 @@ const recipes = [
 ];
 
 export default function Recipes() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        const elements = sectionRef.current?.querySelectorAll('.reveal');
+        elements?.forEach((el) => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <section id="recipes" className="recipes-section">
+        <section id="recipes" className="recipes-section" ref={sectionRef}>
             <div className="recipes-container">
                 {/* Section Header */}
-                <div className="recipes-header">
+                <div className="recipes-header reveal">
                     <div className="recipes-header-content">
                         <span className="recipes-eyebrow">Kitchen Chronicles</span>
                         <h2 className="recipes-title">
@@ -51,8 +81,12 @@ export default function Recipes() {
 
                 {/* Recipes Grid */}
                 <div className="recipes-grid">
-                    {recipes.map((recipe) => (
-                        <div key={recipe.id} className="recipe-card">
+                    {recipes.map((recipe, index) => (
+                        <div
+                            key={recipe.id}
+                            className="recipe-card reveal"
+                            style={{ transitionDelay: `${index * 0.15}s` }}
+                        >
                             {/* 1. Image Wrapper */}
                             <div className="recipe-image-wrapper">
                                 <img
@@ -96,7 +130,7 @@ export default function Recipes() {
                 </div>
 
                 {/* Mobile View All Link */}
-                <div className="mt-12 md:hidden">
+                <div className="mt-12 md:hidden reveal" style={{ transitionDelay: '0.4s' }}>
                     <a href="#recipes" className="recipes-view-all">
                         View All Recipes
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,4 +142,3 @@ export default function Recipes() {
         </section>
     );
 }
-

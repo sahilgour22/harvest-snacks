@@ -7,16 +7,22 @@
   /* Deep Forest Green */
   --color-accent: #F4C430;
   /* Earthy Yellow */
-  --color-secondary: #8B5E3C;
-  /* Nut Brown */
-  --color-background: #FAFAF7;
-  /* Soft Off-White */
+  --color-background: #FAF9F6;
+  /* Warm Off-White */
   --color-text: #1A1A1A;
   /* Charcoal Black */
 
-  /* Gradient Variations */
-  --gradient-hero: linear-gradient(135deg, #1F6F43 0%, #2A8F5A 50%, #1F6F43 100%);
-  --gradient-accent: linear-gradient(135deg, #F4C430 0%, #FFD54F 100%);
+  /* Contextual Accents (Premium 2026) */
+  --accent-makhana: #F4C430;
+  /* Warm Gold */
+  --accent-almonds: #A67C52;
+  /* Soft Caramel */
+  --accent-cashews: #E6D5B8;
+  /* Creamy Beige */
+  --accent-seeds: #7D8C6A;
+  /* Muted Olive */
+  --accent-recipes: #B4C4B5;
+  /* Light Sage Green */
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -34,16 +40,16 @@
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(31, 111, 67, 0.08);
-  --shadow-md: 0 4px 16px rgba(31, 111, 67, 0.12);
-  --shadow-lg: 0 8px 32px rgba(31, 111, 67, 0.16);
-  --shadow-hover: 0 12px 40px rgba(31, 111, 67, 0.2);
+  /* Shadows (Premium & Soft) */
+  --shadow-sm: 0 2px 8px rgba(31, 111, 67, 0.05);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 15px 45px rgba(31, 111, 67, 0.1);
 
-  /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-base: 0.3s ease;
-  --transition-slow: 0.5s ease;
+  /* Transitions (Calm & Premium) */
+  --transition-fast: 200ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Global Styles */
@@ -173,27 +179,28 @@ html {
 
 /* Utility Classes */
 .fade-in-up {
-  animation: fadeInUp 0.8s ease forwards;
+  animation: fadeInUp 0.8s var(--transition-slow) forwards;
 }
 
 .fade-in {
-  animation: fadeIn 0.6s ease forwards;
+  animation: fadeIn 0.6s var(--transition-base) forwards;
 }
 
 .float {
   animation: float 3s ease-in-out infinite;
 }
 
-.scale-in {
-  animation: scaleIn 0.5s ease forwards;
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
 }
 
-.slide-in-left {
-  animation: slideInLeft 0.8s ease forwards;
-}
-
-.slide-in-right {
-  animation: slideInRight 0.8s ease forwards;
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Button Base Styles */

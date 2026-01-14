@@ -2,8 +2,9 @@
 .about-section {
     padding-top: 120px;
     padding-bottom: 120px;
-    background-color: #FAFAF7;
+    background-color: var(--color-background);
     position: relative;
+    overflow: hidden;
 }
 
 .about-container {
@@ -31,7 +32,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #1F6F43;
+    color: var(--color-primary);
     opacity: 0.7;
     margin-bottom: 16px;
     display: block;
@@ -40,8 +41,7 @@
 .about-heading {
     font-size: 52px;
     font-weight: 400;
-    /* Righteous */
-    color: #1A1A1A;
+    color: var(--color-text);
     line-height: 1.1;
     margin-bottom: 24px;
 }
@@ -78,24 +78,29 @@
 
 .feature-card {
     background: #ffffff;
-    border-radius: 24px;
+    border-radius: var(--radius-xl);
     padding: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: all var(--transition-base);
+}
+
+.feature-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
 }
 
 .feature-card-green {
-    background: #f1f7f4;
-    /* Toned down light green */
-    border-color: rgba(31, 111, 67, 0.1);
+    background: linear-gradient(135deg, #f1f7f4 0%, #e8f3ee 100%);
+    border-color: rgba(31, 111, 67, 0.08);
 }
 
 .feature-title {
     font-size: 24px;
     font-weight: 600;
-    color: #1F6F43;
+    color: var(--color-primary);
     margin-bottom: 32px;
 }
 
@@ -113,21 +118,28 @@
 }
 
 .value-icon {
-    width: 40px;
-    height: 40px;
-    background: #E8F5E9;
-    border-radius: 12px;
+    width: 44px;
+    height: 44px;
+    background: rgba(31, 111, 67, 0.05);
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1F6F43;
+    color: var(--color-primary);
     flex-shrink: 0;
+    transition: all var(--transition-base);
+}
+
+.value-row:hover .value-icon {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
 }
 
 .value-content h4 {
     font-size: 16px;
     font-weight: 600;
-    color: #1A1A1A;
+    color: var(--color-text);
     margin-bottom: 4px;
 }
 
@@ -146,19 +158,26 @@
 .nutrition-item {
     display: flex;
     flex-direction: column;
+    padding: 12px;
+    border-radius: var(--radius-lg);
+    transition: background 0.3s ease;
+}
+
+.nutrition-item:hover {
+    background: rgba(31, 111, 67, 0.03);
 }
 
 .nutrition-keyword {
     font-size: 18px;
     font-weight: 700;
-    color: #1F6F43;
+    color: var(--color-primary);
     margin-bottom: 4px;
 }
 
 .nutrition-explain {
     font-size: 14px;
     color: #555;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* Subsection 3: From Farm to Pack */
@@ -175,8 +194,7 @@
 .about-sub-title {
     font-size: 42px;
     font-weight: 400;
-    /* Righteous */
-    color: #1A1A1A;
+    color: var(--color-text);
     margin-bottom: 16px;
 }
 
@@ -203,33 +221,45 @@
 
 .process-card {
     background: #ffffff;
-    border-radius: 24px;
+    border-radius: var(--radius-xl);
     padding: 40px;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
-    transition: transform 0.3s ease;
+    transition: all var(--transition-base);
+}
+
+.process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(31, 111, 67, 0.1);
 }
 
 .process-icon {
-    font-size: 40px;
+    font-size: 44px;
     margin-bottom: 24px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.05));
+    transition: transform 0.5s ease;
+}
+
+.process-card:hover .process-icon {
+    transform: scale(1.15) rotate(5deg);
 }
 
 .process-card h4 {
     font-size: 18px;
     font-weight: 600;
-    color: #1A1A1A;
+    color: var(--color-text);
     margin-bottom: 12px;
 }
 
 .process-card p {
     font-size: 15px;
     color: #666;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 @media (max-width: 640px) {
@@ -271,16 +301,4 @@
     .process-card {
         padding: 24px;
     }
-}
-
-/* Generic Utilities */
-.fade-up {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
 }

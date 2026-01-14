@@ -2,7 +2,7 @@
 .recipes-section {
     padding-top: 120px;
     padding-bottom: 120px;
-    background-color: #ffffff;
+    background-color: var(--color-background);
     position: relative;
 }
 
@@ -30,13 +30,6 @@
     }
 }
 
-/* Touch device optimizations */
-@media (hover: none) {
-    .recipe-card:hover {
-        transform: none;
-    }
-}
-
 /* Header Styles */
 .recipes-header {
     display: flex;
@@ -55,7 +48,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #1F6F43;
+    color: var(--color-primary);
     opacity: 0.7;
     margin-bottom: 12px;
     display: block;
@@ -64,36 +57,27 @@
 .recipes-title {
     font-size: 48px;
     font-weight: 400;
-    /* Matching Righteous */
-    color: #1A1A1A;
+    color: var(--color-text);
     line-height: 1.1;
-}
-
-@media (max-width: 768px) {
-    .recipes-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .recipes-title {
-        font-size: 36px;
-    }
 }
 
 .recipes-view-all {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     font-size: 15px;
     font-weight: 600;
-    color: #1F6F43;
+    color: var(--color-primary);
     text-decoration: none;
-    transition: opacity 0.2s ease;
-    padding-bottom: 8px;
+    transition: all var(--transition-base);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(31, 111, 67, 0.1);
 }
 
 .recipes-view-all:hover {
-    opacity: 0.7;
+    background: rgba(31, 111, 67, 0.05);
+    transform: translateX(4px);
 }
 
 /* Grid & Card System */
@@ -118,32 +102,31 @@
 .recipe-card {
     display: flex;
     flex-direction: column;
-    background: transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    transition: all var(--transition-base);
     height: 100%;
     text-decoration: none;
     color: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .recipe-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
 }
 
 .recipe-image-wrapper {
     position: relative;
     aspect-ratio: 4 / 3;
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    background-color: #FAFAF7;
+    background-color: var(--color-background);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 32px;
-    transition: box-shadow 0.3s ease;
-}
-
-.recipe-card:hover .recipe-image-wrapper {
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    padding: 24px;
 }
 
 .recipe-image-wrapper img {
@@ -154,27 +137,27 @@
 }
 
 .recipe-card:hover .recipe-image-wrapper img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .recipe-card-title {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.3;
-    color: #1A1A1A;
-    margin-top: 16px;
-    transition: color 0.2s ease;
+    color: var(--color-text);
+    margin-top: 20px;
+    transition: color var(--transition-base);
 }
 
 .recipe-card:hover .recipe-card-title {
-    color: #1F6F43;
+    color: var(--color-primary);
 }
 
 .recipe-card-description {
     font-size: 14px;
     color: #666;
-    line-height: 1.5;
-    margin-top: 8px;
+    line-height: 1.6;
+    margin-top: 10px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -186,7 +169,9 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-top: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .meta-item {
@@ -197,23 +182,25 @@
     color: #888;
 }
 
-.meta-item svg {
-    width: 14px;
-    height: 14px;
-    stroke-width: 1.8;
-}
-
 .recipe-card-cta {
     font-size: 14px;
-    font-weight: 600;
-    color: #1F6F43;
+    font-weight: 700;
+    color: var(--color-primary);
     margin-top: 20px;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    transition: gap 0.2s ease;
+    gap: 6px;
+    transition: all var(--transition-base);
 }
 
 .recipe-card:hover .recipe-card-cta {
-    gap: 8px;
+    color: var(--accent-seeds);
+    gap: 10px;
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .recipe-card:hover {
+        transform: none;
+    }
 }

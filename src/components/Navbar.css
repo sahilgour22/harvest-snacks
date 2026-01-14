@@ -69,7 +69,7 @@
     opacity: 0.7;
 }
 
-/* Underline Animation */
+/* Underline Animation (Expand from Center) */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -79,13 +79,12 @@
     height: 1.5px;
     background-color: currentColor;
     transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
+    transform-origin: center;
+    transition: transform var(--transition-base);
 }
 
 .nav-link:hover::after {
     transform: scaleX(1);
-    transform-origin: left;
 }
 
 /* Logo Styles */
@@ -101,20 +100,20 @@
     font-weight: 700;
     letter-spacing: -0.02em;
     color: white;
-    transition: color 0.3s ease;
+    transition: color var(--transition-base);
 }
 
 .navbar-scrolled .nav-logo-text {
-    color: #1F6F43;
+    color: var(--color-primary);
 }
 
-/* CTA Button */
+/* CTA Button (Shop Now) */
 .nav-cta-button {
-    height: 40px;
-    padding: 0 22px;
-    background-color: #F4C430;
-    color: #1A1A1A;
-    border-radius: 9999px;
+    height: 42px;
+    padding: 0 24px;
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    border-radius: var(--radius-full);
     font-size: 14px;
     font-weight: 600;
     display: inline-flex;
@@ -122,18 +121,20 @@
     justify-content: center;
     border: none;
     cursor: pointer;
-    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    transition: all var(--transition-base);
     white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(244, 196, 48, 0.15);
 }
 
 .nav-cta-button:hover {
-    transform: scale(1.03);
+    transform: translateY(-2px);
+    background-color: var(--color-accent);
     filter: brightness(1.05);
-    box-shadow: 0 4px 12px rgba(244, 196, 48, 0.2);
+    box-shadow: 0 8px 25px rgba(244, 196, 48, 0.3);
 }
 
 .nav-cta-button:active {
-    transform: scale(0.98);
+    transform: translateY(1px);
 }
 
 /* Mobile Toggle */
