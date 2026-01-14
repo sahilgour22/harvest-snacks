@@ -1,0 +1,245 @@
+/* About Section Styles */
+.about-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #FAFAF7;
+    position: relative;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 24px;
+    }
+}
+
+/* Subsection 1: Our Story */
+.about-story-hero {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 100px;
+}
+
+.about-eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #1F6F43;
+    opacity: 0.7;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.about-heading {
+    font-size: 52px;
+    font-weight: 400;
+    /* Righteous */
+    color: #1A1A1A;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: 40px;
+    }
+
+    .about-description {
+        font-size: 16px;
+    }
+}
+
+/* Subsection 2: Values & Nutrition */
+.about-grid-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 120px;
+}
+
+@media (max-width: 1024px) {
+    .about-grid-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.feature-card-green {
+    background: #f1f7f4;
+    /* Toned down light green */
+    border-color: rgba(31, 111, 67, 0.1);
+}
+
+.feature-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1F6F43;
+    margin-bottom: 32px;
+}
+
+/* Values Card List */
+.values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.value-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.value-icon {
+    width: 40px;
+    height: 40px;
+    background: #E8F5E9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1F6F43;
+    flex-shrink: 0;
+}
+
+.value-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+}
+
+.value-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Nutrition Grid */
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.nutrition-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.nutrition-keyword {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1F6F43;
+    margin-bottom: 4px;
+}
+
+.nutrition-explain {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Subsection 3: From Farm to Pack */
+.about-process-section {
+    width: 100%;
+    margin-top: 120px;
+}
+
+.about-sub-heading {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.about-sub-title {
+    font-size: 42px;
+    font-weight: 400;
+    /* Righteous */
+    color: #1A1A1A;
+    margin-bottom: 16px;
+}
+
+.about-sub-description {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+@media (max-width: 1024px) {
+    .about-process-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.process-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.process-icon {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.process-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 12px;
+}
+
+.process-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Generic Utilities */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

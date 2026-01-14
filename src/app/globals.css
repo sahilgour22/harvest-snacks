@@ -3,16 +3,21 @@
 /* Three Fields Brand Design System */
 :root {
   /* Brand Colors */
-  --color-primary: #1F6F43;        /* Deep Forest Green */
-  --color-accent: #F4C430;         /* Earthy Yellow */
-  --color-secondary: #8B5E3C;      /* Nut Brown */
-  --color-background: #FAFAF7;     /* Soft Off-White */
-  --color-text: #1A1A1A;           /* Charcoal Black */
-  
+  --color-primary: #1F6F43;
+  /* Deep Forest Green */
+  --color-accent: #F4C430;
+  /* Earthy Yellow */
+  --color-secondary: #8B5E3C;
+  /* Nut Brown */
+  --color-background: #FAFAF7;
+  /* Soft Off-White */
+  --color-text: #1A1A1A;
+  /* Charcoal Black */
+
   /* Gradient Variations */
   --gradient-hero: linear-gradient(135deg, #1F6F43 0%, #2A8F5A 50%, #1F6F43 100%);
   --gradient-accent: linear-gradient(135deg, #F4C430 0%, #FFD54F 100%);
-  
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -21,20 +26,20 @@
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
-  
+
   /* Border Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-full: 9999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(31, 111, 67, 0.08);
   --shadow-md: 0 4px 16px rgba(31, 111, 67, 0.12);
   --shadow-lg: 0 8px 32px rgba(31, 111, 67, 0.16);
   --shadow-hover: 0 12px 40px rgba(31, 111, 67, 0.2);
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
@@ -59,7 +64,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-righteous), 'Righteous', 'Inter', sans-serif;
   font-weight: 400;
   line-height: 1.2;
@@ -83,6 +93,7 @@ html {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -93,15 +104,19 @@ html {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -112,6 +127,7 @@ html {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -123,6 +139,7 @@ html {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -134,6 +151,7 @@ html {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -141,9 +159,12 @@ html {
 }
 
 @keyframes rotate3d {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
   }
+
   50% {
     transform: perspective(1000px) rotateY(5deg) rotateX(-2deg);
   }
@@ -174,18 +195,8 @@ html {
   animation: slideInRight 0.8s ease forwards;
 }
 
-/* Container */
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 var(--spacing-md);
-  }
-}
+/* Container - Now handled by Tailwind config */
+/* Removed custom .container to use Tailwind's built-in container utility */
 
 /* Button Base Styles */
 .btn {
