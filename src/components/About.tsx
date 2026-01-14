@@ -30,40 +30,56 @@ export default function About() {
 
     return (
         <>
-            {/* 3. WHY / BENEFITS SECTION */}
+            {/* 3. WHY / BENEFITS SECTION (Premium Crafted Moment) */}
             <section id="benefits" className="benefits-section" ref={benefitsRef}>
                 <div className="benefits-container">
                     <div className="benefits-header reveal">
-                        <span className="benefits-eyebrow">Why Three Fields?</span>
-                        <h2 className="benefits-title">Crafted for Elite Wellbeing</h2>
+                        <span className="benefits-eyebrow">The Three Fields Standard</span>
+                        <h2 className="benefits-title">Refining the Art of Wellbeing</h2>
                     </div>
 
-                    <div className="benefits-v-grid">
-                        <div className="benefit-item reveal">
-                            <div className="benefit-icon">🌱</div>
-                            <div className="benefit-content">
+                    <div className="benefits-grid">
+                        {/* Benefit Card 1 */}
+                        <div className="benefit-card reveal">
+                            <div className="benefit-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M12 2L12 9" />
+                                    <path d="M12 9C12 9 15 6 18 6C21 6 22 8 22 10C22 12 19 14 16 14C13 14 12 12 12 12" />
+                                    <path d="M12 9C12 9 9 6 6 6C3 6 2 8 2 10C2 12 5 14 8 14C11 14 12 12 12 12" />
+                                    <path d="M12 12L12 22" />
+                                </svg>
+                            </div>
+                            <div className="benefit-card-content">
                                 <h4>Clean Ingredients</h4>
-                                <p>Sourced directly from certified organic farms focusing on ethical practices.</p>
+                                <p>Sourced directly from certified organic estates, prioritizing ecological harmony and raw purity.</p>
                             </div>
                         </div>
 
-                        <div className="benefit-divider" />
-
-                        <div className="benefit-item reveal">
-                            <div className="benefit-icon">🚫</div>
-                            <div className="benefit-content">
-                                <h4>No Preservatives</h4>
-                                <p>Absolutely zero artificial additives, chemicals, or hidden nasties.</p>
+                        {/* Benefit Card 2 */}
+                        <div className="benefit-card reveal" style={{ transitionDelay: '0.1s' }}>
+                            <div className="benefit-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                    <line x1="9.88" y1="9.88" x2="14.12" y2="14.12" />
+                                </svg>
+                            </div>
+                            <div className="benefit-card-content">
+                                <h4>Zero Integrity Loss</h4>
+                                <p>Absolutely no synthetic additives or hidden chemicals. We protect the true essence of every seed.</p>
                             </div>
                         </div>
 
-                        <div className="benefit-divider" />
-
-                        <div className="benefit-item reveal">
-                            <div className="benefit-icon">💪</div>
-                            <div className="benefit-content">
-                                <h4>Elite Nutrition</h4>
-                                <p>Slow-roasted in small batches to preserve nutrients and purity.</p>
+                        {/* Benefit Card 3 */}
+                        <div className="benefit-card reveal" style={{ transitionDelay: '0.2s' }}>
+                            <div className="benefit-icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                            </div>
+                            <div className="benefit-card-content">
+                                <h4>Elite Roasting</h4>
+                                <p>Slow-roasted in artisanal small batches to preserve natural oils, textures, and micronutrients.</p>
                             </div>
                         </div>
                     </div>
