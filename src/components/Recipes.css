@@ -19,6 +19,24 @@
     }
 }
 
+@media (max-width: 640px) {
+    .recipes-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .recipes-title {
+        font-size: 32px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .recipe-card:hover {
+        transform: none;
+    }
+}
+
 /* Header Styles */
 .recipes-header {
     display: flex;

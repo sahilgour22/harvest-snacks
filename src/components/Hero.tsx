@@ -82,7 +82,7 @@ export default function Hero() {
                     </div>
 
                     {/* Right content: Product Visuals */}
-                    <div className="hero-visuals hidden md:flex">
+                    <div className="hero-visuals">
                         <div className="relative w-full h-full flex items-center justify-center">
                             {/* Main Product Visual */}
                             <div className="relative z-20 animate-float-subtle">

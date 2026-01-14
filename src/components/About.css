@@ -232,6 +232,47 @@
     line-height: 1.5;
 }
 
+@media (max-width: 640px) {
+    .about-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .about-story-hero {
+        margin-bottom: 64px;
+    }
+
+    .about-heading {
+        font-size: 32px;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+
+    .feature-title {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .about-process-section {
+        margin-top: 80px;
+    }
+
+    .about-sub-title {
+        font-size: 28px;
+    }
+
+    .process-card {
+        padding: 24px;
+    }
+}
+
 /* Generic Utilities */
 .fade-up {
     opacity: 0;

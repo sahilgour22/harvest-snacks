@@ -61,6 +61,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Typography */
@@ -195,9 +196,6 @@ html {
   animation: slideInRight 0.8s ease forwards;
 }
 
-/* Container - Now handled by Tailwind config */
-/* Removed custom .container to use Tailwind's built-in container utility */
-
 /* Button Base Styles */
 .btn {
   display: inline-flex;
@@ -265,11 +263,4 @@ html {
 .card:hover {
   box-shadow: var(--shadow-lg);
   transform: scale(1.03);
-}
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
 }

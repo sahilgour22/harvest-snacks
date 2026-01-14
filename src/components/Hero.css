@@ -174,10 +174,58 @@
     justify-content: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 640px) {
+    .hero-grid {
+        gap: 40px;
+    }
+
+    .hero-h1 {
+        font-size: 40px;
+    }
+
+    .hero-p {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
     .hero-visuals {
-        height: 400px;
-        margin-top: 48px;
+        height: auto;
+        min-height: 320px;
+    }
+
+    .hero-visuals .w-80 {
+        width: 260px;
+        height: 340px;
+        padding: 24px;
+    }
+
+    .hero-visuals .w-64 {
+        width: 160px;
+        height: 160px;
+    }
+
+    /* Hide smaller decorative elements on mobile to reduce noise */
+    .hero-visuals .absolute {
+        display: none;
     }
 }
 
