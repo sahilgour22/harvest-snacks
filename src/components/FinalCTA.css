@@ -1,0 +1,79 @@
+/* 6. FINAL CTA SECTION (Brand Closure) */
+.final-cta-section {
+    padding: 100px 0;
+    background-color: #0c1a14;
+    /* Deep green brand family */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.final-cta-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 48px;
+    position: relative;
+    z-index: 10;
+}
+
+.final-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.final-cta-title {
+    font-size: 56px;
+    font-weight: 400;
+    color: #FAF9F6;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+}
+
+.final-cta-btn {
+    height: 64px;
+    padding: 0 48px;
+    background-color: var(--color-accent);
+    color: #1A1A1A;
+    border: none;
+    border-radius: var(--radius-cta);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: 0 10px 30px rgba(201, 168, 78, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.final-cta-btn:hover {
+    transform: translateY(-4px);
+    background-color: #b89945;
+    box-shadow: 0 20px 40px rgba(201, 168, 78, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .final-cta-title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .final-cta-section {
+        padding: 100px 0;
+    }
+
+    .final-cta-container {
+        padding: 0 24px;
+    }
+
+    .final-cta-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    .final-cta-btn {
+        width: 100%;
+        height: 56px;
+    }
+}

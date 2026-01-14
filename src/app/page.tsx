@@ -1,8 +1,9 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Products from '@/components/Products';
-import Recipes from '@/components/Recipes';
 import About from '@/components/About';
+import Recipes from '@/components/Recipes';
+import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -11,8 +12,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Products />
-      <Recipes />
       <About />
+      <Recipes />
+      <FinalCTA />
       <Footer />
     </main>
   );

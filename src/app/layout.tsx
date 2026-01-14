@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Righteous } from "next/font/google";
+import { Inter, Righteous, Caveat } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,6 +10,12 @@ const inter = Inter({
 const righteous = Righteous({
   variable: "--font-righteous",
   weight: "400",
+  subsets: ["latin"],
+});
+
+const artisanal = Caveat({
+  variable: "--font-artisanal",
+  weight: ["500", "700"],
   subsets: ["latin"],
 });
 
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${righteous.variable} antialiased`}
+        className={`${inter.variable} ${righteous.variable} ${artisanal.variable} antialiased`}
         suppressHydrationWarning
       >
         {children}

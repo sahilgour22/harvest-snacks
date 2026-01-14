@@ -30,6 +30,14 @@ export default function Navbar() {
 
     return (
         <>
+            {/* SVG Filter for Organic Ink Texture */}
+            <svg style={{ position: 'absolute', width: 0, height: 0, pointerEvents: 'none' }} aria-hidden="true">
+                <filter id="ink-distress">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.12" numOctaves="3" result="noise" />
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" />
+                </filter>
+            </svg>
+
             <nav
                 className={`navbar-fixed ${isScrolled || isMenuOpen ? 'navbar-scrolled' : 'navbar-initial'}`}
             >

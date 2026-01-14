@@ -1,304 +1,288 @@
-/* About Section Styles */
-.about-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    background-color: var(--color-background);
+/* 3. WHY / BENEFITS SECTION (Clarity & Trust) */
+.benefits-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    /* Clean white */
     position: relative;
-    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.about-container {
-    width: 100%;
-    max-width: 1280px;
+.benefits-container {
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 48px;
 }
 
-@media (max-width: 768px) {
-    .about-container {
-        padding: 0 24px;
-    }
-}
-
-/* Subsection 1: Our Story */
-.about-story-hero {
+.benefits-header {
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 100px;
+    margin-bottom: 56px;
 }
 
-.about-eyebrow {
+.benefits-eyebrow {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
     color: var(--color-primary);
-    opacity: 0.7;
     margin-bottom: 16px;
     display: block;
 }
 
-.about-heading {
-    font-size: 52px;
-    font-weight: 400;
-    color: var(--color-text);
-    line-height: 1.1;
-    margin-bottom: 24px;
-}
-
-.about-description {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .about-heading {
-        font-size: 40px;
-    }
-
-    .about-description {
-        font-size: 16px;
-    }
-}
-
-/* Subsection 2: Values & Nutrition */
-.about-grid-features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-bottom: 120px;
-}
-
-@media (max-width: 1024px) {
-    .about-grid-features {
-        grid-template-columns: 1fr;
-    }
-}
-
-.feature-card {
-    background: #ffffff;
-    border-radius: var(--radius-xl);
-    padding: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: all var(--transition-base);
-}
-
-.feature-card:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-4px);
-}
-
-.feature-card-green {
-    background: linear-gradient(135deg, #f1f7f4 0%, #e8f3ee 100%);
-    border-color: rgba(31, 111, 67, 0.08);
-}
-
-.feature-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 32px;
-}
-
-/* Values Card List */
-.values-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.value-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.value-icon {
-    width: 44px;
-    height: 44px;
-    background: rgba(31, 111, 67, 0.05);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primary);
-    flex-shrink: 0;
-    transition: all var(--transition-base);
-}
-
-.value-row:hover .value-icon {
-    background: var(--color-primary);
-    color: white;
-    transform: scale(1.1);
-}
-
-.value-content h4 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--color-text);
-    margin-bottom: 4px;
-}
-
-.value-content p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Nutrition Grid */
-.nutrition-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
-.nutrition-item {
-    display: flex;
-    flex-direction: column;
-    padding: 12px;
-    border-radius: var(--radius-lg);
-    transition: background 0.3s ease;
-}
-
-.nutrition-item:hover {
-    background: rgba(31, 111, 67, 0.03);
-}
-
-.nutrition-keyword {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 4px;
-}
-
-.nutrition-explain {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
-}
-
-/* Subsection 3: From Farm to Pack */
-.about-process-section {
-    width: 100%;
-    margin-top: 120px;
-}
-
-.about-sub-heading {
-    text-align: center;
-    margin-bottom: 64px;
-}
-
-.about-sub-title {
+.benefits-title {
     font-size: 42px;
     font-weight: 400;
     color: var(--color-text);
-    margin-bottom: 16px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
-.about-sub-description {
-    font-size: 16px;
-    color: #666;
-    max-width: 600px;
+/* Vertical Rhythm Layout */
+.benefits-v-grid {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
     margin: 0 auto;
 }
 
-.about-process-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-}
-
-@media (max-width: 1024px) {
-    .about-process-grid {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
-
-.process-card {
-    background: #ffffff;
-    border-radius: var(--radius-xl);
-    padding: 40px;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.04);
+.benefit-item {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 32px 0;
+}
+
+.benefit-icon {
+    font-size: 32px;
+    width: 64px;
+    height: 64px;
+    background: #f8fcf9;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
-    height: 100%;
-    transition: all var(--transition-base);
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.process-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-hover);
-    border-color: rgba(31, 111, 67, 0.1);
-}
-
-.process-icon {
-    font-size: 44px;
-    margin-bottom: 24px;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.05));
-    transition: transform 0.5s ease;
-}
-
-.process-card:hover .process-icon {
-    transform: scale(1.15) rotate(5deg);
-}
-
-.process-card h4 {
-    font-size: 18px;
+.benefit-content h4 {
+    font-size: 20px;
     font-weight: 600;
     color: var(--color-text);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
-.process-card p {
-    font-size: 15px;
-    color: #666;
+.benefit-content p {
+    font-size: 16px;
+    color: #5c5c5c;
     line-height: 1.6;
 }
 
-@media (max-width: 640px) {
-    .about-section {
-        padding-top: 80px;
-        padding-bottom: 80px;
+.benefit-divider {
+    height: 1px;
+    background: repeating-linear-gradient(to right, #e0e0e0 0, #e0e0e0 2px, transparent 2px, transparent 6px);
+    /* Dotted separator */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .benefits-container {
+        padding: 0 24px;
     }
 
-    .about-story-hero {
-        margin-bottom: 64px;
-    }
-
-    .about-heading {
+    .benefits-title {
         font-size: 32px;
     }
 
-    .feature-card {
-        padding: 24px;
-    }
-
-    .feature-title {
-        font-size: 20px;
-        margin-bottom: 24px;
-    }
-
-    .nutrition-grid {
-        grid-template-columns: 1fr;
+    .benefit-item {
+        flex-direction: column;
         gap: 16px;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* 4. SOURCING / QUALITY / STORY SECTION (Cinematic Depth) */
+.story-section {
+    position: relative;
+    padding: 80px 0;
+    /* Balanced vertical rhythm */
+    background-color: #0c1a14;
+    overflow: hidden;
+    color: #ffffff;
+    z-index: 1;
+}
+
+/* Reveal Logic */
+.story-section .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.story-section .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Abstract Texture / Background Image */
+.story-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000');
+    /* Farm texture */
+    background-size: cover;
+    background-position: center;
+    /* Cinematic treatment: brightness and contrast focus */
+    filter: brightness(0.55) contrast(0.9);
+    z-index: 0;
+    /* Base layer */
+}
+
+.story-background-overlay {
+    position: absolute;
+    inset: 0;
+    /* Subtle vertical gradient (55% -> 75%) */
+    background: linear-gradient(to bottom, rgba(8, 18, 14, 0.55), rgba(8, 18, 14, 0.75));
+    z-index: 10;
+}
+
+.story-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 48px;
+    position: relative;
+    z-index: 20;
+    /* Ensure container is above overlay */
+}
+
+.story-card {
+    max-width: 880px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.25);
+    /* Reduced opacity for readability */
+    backdrop-filter: none;
+    /* Removed blur as requested */
+    border-radius: 32px;
+    padding: 80px 64px;
+    /* Large breathable padding for storytelling */
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle Grain Effect on Card */
+.story-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    z-index: -1;
+}
+
+.story-divider {
+    width: 60px;
+    height: 1px;
+    background: #C9A84E;
+    opacity: 0.5;
+    margin-bottom: 32px;
+}
+
+.story-content {
+    max-width: 100%;
+    position: relative;
+    z-index: 25;
+    /* Top layer: Story Text */
+}
+
+.story-eyebrow {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #CFCFCF;
+    /* Supporting text reset */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.story-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    /* Forced pure white */
+}
+
+.story-description {
+    font-size: 20px;
+    line-height: 1.9;
+    /* Relaxed storytelling rhythm */
+    color: #E6E6E6;
+    /* Forced story body color */
+    max-width: 65ch;
+    margin-bottom: 48px;
+}
+
+.story-stats-grid {
+    display: flex;
+    gap: 64px;
+}
+
+.story-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stat-unit {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+.stat-text {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(250, 249, 246, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .story-title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story-section {
+        padding: 100px 0;
     }
 
-    .about-process-section {
-        margin-top: 80px;
+    .story-container {
+        padding: 0 24px;
     }
 
-    .about-sub-title {
-        font-size: 28px;
+    .story-card {
+        padding: 48px 24px;
+        border-radius: 24px;
+        background: rgba(0, 0, 0, 0.45);
+        /* Slightly darker for mobile contrast */
     }
 
-    .process-card {
-        padding: 24px;
+    .story-title {
+        font-size: 32px;
+    }
+
+    .story-description {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .story-stats-grid {
+        gap: 32px;
     }
 }

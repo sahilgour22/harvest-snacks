@@ -1,8 +1,8 @@
 /* Footer Section Styles */
 .footer-section {
-    background: linear-gradient(180deg, #1A5235 0%, #154228 100%);
-    color: #E8F5E9;
-    padding-top: 120px;
+    background: linear-gradient(180deg, #0F2A1E 0%, #16402D 100%);
+    color: #FAF9F6;
+    padding-top: 100px;
     padding-bottom: 40px;
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -73,16 +73,16 @@
     align-items: center;
     justify-content: center;
     color: #E8F5E9;
-    transition: all var(--transition-base);
+    transition: all var(--transition-fast);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-link:hover {
     background: var(--color-accent);
     color: #1A1A1A;
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     border-color: var(--color-accent);
-    box-shadow: 0 8px 20px rgba(244, 196, 48, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Nav Columns (Explore & Products) */
@@ -109,13 +109,14 @@
     font-size: 15px;
     color: rgba(232, 245, 233, 0.65);
     text-decoration: none;
-    transition: all var(--transition-base);
+    transition: all var(--transition-fast);
     display: inline-block;
 }
 
 .footer-nav-link:hover {
     color: #ffffff;
-    transform: translateX(6px);
+    transform: translateX(2px);
+    /* Even subtler */
 }
 
 /* Contact Column */
@@ -149,7 +150,7 @@
 .contact-link {
     color: inherit;
     text-decoration: none;
-    transition: color var(--transition-base);
+    transition: color var(--transition-fast);
 }
 
 .contact-link:hover {
