@@ -3,9 +3,9 @@
     padding-bottom: 120px;
     background-color: #f7f3ee;
     /* Fallback warm off-white */
-    background-image: url('/bg-product.png');
+    background-image: url('/bg_prod1.png');
     background-repeat: repeat;
-    background-size: 200px;
+    background-size: 100%;
     /* Controlled sizing for elegant scale */
     background-position: center;
     position: relative;
@@ -17,7 +17,9 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(247, 243, 238, 0.4);
+    /* background-color: rgba(239, 238, 247, 0.4); */
+
+
     /* Slight tint for softness */
     pointer-events: none;
     z-index: 1;

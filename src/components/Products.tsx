@@ -78,34 +78,38 @@ export default function Products() {
     }, []);
 
     return (
-        <section id="products" className="products-section" ref={sectionRef}>
-            <div className="products-container">
-                <div className="products-header reveal">
-                    <span className="products-pretitle">The Collection</span>
-                    <h2 className="products-title">Nature's Finest Fuel</h2>
-                </div>
+<section id="products" className="products-section" ref={sectionRef}>
+    {/* Background text */}
+  <div className="pointer-events-none absolute bottom-10 left-[-10%] w-[120%] select-none">
+    <div className="whitespace-nowrap font-['Chicken_Pie'] text-[20vw] font-black leading-none text-black/10">
+      THREE FIELDS THREE FIELDS THREE FIELDS THREE FIELDS
+    </div>
+  </div>
 
-                <div className="products-grid">
-                    {products.map((product, index) => (
-                        <div
-                            key={product.id}
-                            className={`product-card product-card-${product.category} reveal`}
-                            style={{ transitionDelay: `${index * 0.1}s` }}
-                        >
-                            <div className="product-image-container">
-                                <img
-                                    src={product.image}
-                                    alt={product.name}
-                                    loading="lazy"
-                                />
-                            </div>
-                            <h3 className="product-name">{product.name}</h3>
-                            <p className="product-subtitle">{product.benefit}</p>
-                            <div className="product-cta">View Product</div>
-                        </div>
-                    ))}
+    <div className="products-container">
+        <div className="products-header reveal">
+            {/* <span className="products-pretitle">The Collection</span> */}
+            <h2 className="products-title">Nature's Finest Fuel</h2>
+        </div>
+
+        <div className="products-grid">
+            {products.map((product, index) => (
+                <div
+                    key={product.id}
+                    className={`product-card product-card-${product.category} reveal`}
+                    style={{ transitionDelay: `${index * 0.1}s` }}
+                >
+                    <div className="product-image-container">
+                        <img src={product.image} alt={product.name} />
+                    </div>
+                    <h3 className="product-name">{product.name}</h3>
+                    <p className="product-subtitle">{product.benefit}</p>
+                    <div className="product-cta">View Product</div>
                 </div>
-            </div>
-        </section>
+            ))}
+        </div>
+    </div>
+</section>
+
     );
 }
