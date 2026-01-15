@@ -58,7 +58,7 @@ export default function Navbar() {
                         <Link href="#products" className="nav-link">Products</Link>
                         <Link href="#recipes" className="nav-link">Recipes</Link>
                         <Link href="#about" className="nav-link">About Us</Link>
-                        <Link href="#contact" className="nav-link">Contact</Link>
+                        <Link href="/contact" className="nav-link">Contact</Link>
                     </div>
 
                     {/* CTA/Toggle Group */}
@@ -107,7 +107,7 @@ export default function Navbar() {
                         <Link href="#products" className="mobile-nav-link" onClick={closeMenu}>Products</Link>
                         <Link href="#recipes" className="mobile-nav-link" onClick={closeMenu}>Recipes</Link>
                         <Link href="#about" className="mobile-nav-link" onClick={closeMenu}>About Us</Link>
-                        <Link href="#contact" className="mobile-nav-link" onClick={closeMenu}>Contact</Link>
+                        <Link href="/contact" className="mobile-nav-link" onClick={closeMenu}>Contact</Link>
                     </div>
                     <div className="mobile-menu-footer">
                         <button className="mobile-cta-button" onClick={closeMenu}>
