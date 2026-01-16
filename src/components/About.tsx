@@ -30,95 +30,46 @@ export default function About() {
 
     return (
         <>
-            {/* 3. WHY / BENEFITS SECTION (Premium Crafted Moment) */}
-            <section id="benefits" className="benefits-section" ref={benefitsRef}>
-                <div className="benefits-container">
-                    <div className="benefits-header reveal">
-                        <span className="benefits-eyebrow">The Three Fields Standard</span>
-                        <h2 className="benefits-title">Refining the Art of Wellbeing</h2>
-                    </div>
 
-                    <div className="benefits-grid">
-                        {/* Benefit Card 1 */}
-                        <div className="benefit-card reveal">
-                            <div className="benefit-icon-wrapper">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M12 2L12 9" />
-                                    <path d="M12 9C12 9 15 6 18 6C21 6 22 8 22 10C22 12 19 14 16 14C13 14 12 12 12 12" />
-                                    <path d="M12 9C12 9 9 6 6 6C3 6 2 8 2 10C2 12 5 14 8 14C11 14 12 12 12 12" />
-                                    <path d="M12 12L12 22" />
-                                </svg>
-                            </div>
-                            <div className="benefit-card-content">
-                                <h4>Clean Ingredients</h4>
-                                <p>Sourced directly from certified organic estates, prioritizing ecological harmony and raw purity.</p>
-                            </div>
-                        </div>
-
-                        {/* Benefit Card 2 */}
-                        <div className="benefit-card reveal" style={{ transitionDelay: '0.1s' }}>
-                            <div className="benefit-icon-wrapper">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                    <circle cx="12" cy="12" r="3" />
-                                    <line x1="9.88" y1="9.88" x2="14.12" y2="14.12" />
-                                </svg>
-                            </div>
-                            <div className="benefit-card-content">
-                                <h4>Zero Integrity Loss</h4>
-                                <p>Absolutely no synthetic additives or hidden chemicals. We protect the true essence of every seed.</p>
-                            </div>
-                        </div>
-
-                        {/* Benefit Card 3 */}
-                        <div className="benefit-card reveal" style={{ transitionDelay: '0.2s' }}>
-                            <div className="benefit-icon-wrapper">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                </svg>
-                            </div>
-                            <div className="benefit-card-content">
-                                <h4>Elite Roasting</h4>
-                                <p>Slow-roasted in artisanal small batches to preserve natural oils, textures, and micronutrients.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* 4. STORY / SOURCING SECTION */}
-            <section id="story" className="story-section" ref={storyRef}>
-                <div className="story-background-overlay" />
+            {/* 4. STORY / SOURCING SECTION */}
+            <section id="about" className="story-section" ref={storyRef}>
+                <div className="story-bg-texture" />
 
                 <div className="story-container">
-                    <div className="story-card reveal">
-                        <div className="story-divider" />
-
-                        <div className="story-content">
+                    <div className="story-grid">
+                        {/* LEFT: Copy */}
+                        <div className="story-text-content reveal">
                             <span className="story-eyebrow">Our Story</span>
+                            <h2 className="story-title">Three Friends.<br />One Shared Field.</h2>
 
-                            <h2 className="story-title">
-                                Restoring the Connection with Real Food
-                            </h2>
-
-                            <p className="story-description">
-                                Three Fields was born from a simple realization — the modern snack aisle
-                                had lost its soul. We return to the fields, sourcing ancient superfoods
-                                and roasting them with patience to bring clean, honest nutrition
-                                straight from farms to your family.
-                            </p>
-
-                            <div className="story-stats-grid">
-                                <div className="story-stat">
-                                    <span className="stat-unit">100%</span>
-                                    <span className="stat-text">Traceable Sourcing</span>
-                                </div>
-
-                                <div className="story-stat">
-                                    <span className="stat-unit">Zero</span>
-                                    <span className="stat-text">Systemic Additives</span>
-                                </div>
+                            <div className="story-prose">
+                                <p>
+                                    It started with a shared realization. We were three friends, building careers in the corporate world, yet feeling increasingly disconnected from what truly matters.
+                                </p>
+                                <p>
+                                    On the same day, we made a choice. We walked away from the safety of the expected to build something honest.
+                                </p>
+                                <p>
+                                    Three Fields is our shared ground—where three diverse perspectives unite to craft real, meaningful food rooted in nature.
+                                </p>
                             </div>
+                        </div>
+
+                        {/* RIGHT: Abstract Visual */}
+                        <div className="story-visual reveal" style={{ transitionDelay: '0.2s' }}>
+                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="abstract-three-shapes">
+                                {/* Shape 1: Forest */}
+                                <circle cx="150" cy="150" r="100" fill="#16402D" fillOpacity="0.1" className="shape-1" />
+                                {/* Shape 2: Gold */}
+                                <circle cx="250" cy="200" r="90" fill="#C9A84E" fillOpacity="0.15" className="shape-2" />
+                                {/* Shape 3: Sage/Deep */}
+                                <circle cx="180" cy="250" r="80" fill="#0F2A1E" fillOpacity="0.08" className="shape-3" />
+
+                                {/* Connecting Lines (abstract unity) */}
+                                <path d="M150 150 L250 200 L180 250 Z" stroke="#16402D" strokeOpacity="0.1" strokeWidth="1.5" className="shape-connection" />
+                            </svg>
                         </div>
                     </div>
                 </div>

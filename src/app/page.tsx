@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Products from '@/components/Products';
+import Standard from '@/components/Standard';
 import About from '@/components/About';
 import Recipes from '@/components/Recipes';
 import FinalCTA from '@/components/FinalCTA';
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Products />
+      <Standard />
       <About />
       <Recipes />
       <FinalCTA />

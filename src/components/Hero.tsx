@@ -25,7 +25,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section ref={heroRef} className="hero-section">
+        <section id="hero" ref={heroRef} className="hero-section">
             {/* SVG Filter for Hand-Crafted Texture */}
             <svg style={{ position: 'absolute', width: 0, height: 0, pointerEvents: 'none' }} aria-hidden="true">
                 <filter id="ink-distress-hero">

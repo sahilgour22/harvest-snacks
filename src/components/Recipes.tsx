@@ -18,7 +18,7 @@ const recipes: Recipe[] = [
         title: 'Spicy Masala Makhana',
         time: '12 mins',
         servings: '2 People',
-        image: '/makhana.png',
+        image: '/brand-packet.png',
         description: 'A crunchy, spicy protein snack. Perfect for clean mid-day cravings.',
     },
     {
@@ -26,7 +26,7 @@ const recipes: Recipe[] = [
         title: 'Almond Energy Balls',
         time: '15 mins',
         servings: '12 Balls',
-        image: '/nuts.png',
+        image: '/brand-packet.png',
         description: 'No-bake energy bites made with raw almonds and natural sweeteners.',
     },
     {
@@ -34,7 +34,7 @@ const recipes: Recipe[] = [
         title: 'Super Seed Smoothie',
         time: '05 mins',
         servings: '1 Glass',
-        image: '/seeds.png',
+        image: '/brand-packet.png',
         description: 'A nutrient-dense blend topped with our premium seed collection.',
     }
 ];
