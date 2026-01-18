@@ -79,6 +79,30 @@ export default function Products() {
 
     return (
         <section id="products" className="products-section" ref={sectionRef}>
+            {/* Structured Data for Products */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(products.map(p => ({
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        "name": p.name,
+                        "image": `https://threefields.com${p.image}`,
+                        "description": p.benefit,
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Three Fields"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "url": "https://threefields.com#products",
+                            "priceCurrency": "INR",
+                            "availability": "https://schema.org/InStock"
+                        }
+                    })))
+                }}
+            />
+
             {/* Background text */}
             <div className="pointer-events-none absolute bottom-10 left-[-10%] w-[120%] select-none">
                 <div className="whitespace-nowrap font-['Chicken_Pie'] text-[20vw] font-black leading-none text-black/10">
@@ -89,7 +113,7 @@ export default function Products() {
             <div className="products-container">
                 <div className="products-header reveal">
                     {/* <span className="products-pretitle">The Collection</span> */}
-                    <h2 className="products-title">Nature's Finest Fuel</h2>
+                    <h2 className="products-title">Nature's Finest Healthy Snacks</h2>
                 </div>
 
                 <div className="products-grid">
@@ -100,11 +124,17 @@ export default function Products() {
                             style={{ transitionDelay: `${index * 0.1}s` }}
                         >
                             <div className="product-image-container">
-                                <img src={product.image} alt={product.name} />
+                                <img
+                                    src={product.image}
+                                    alt={`${product.name} - ${product.benefit} by Three Fields`}
+                                    loading="lazy"
+                                    width={400}
+                                    height={400}
+                                />
                             </div>
                             <h3 className="product-name">{product.name}</h3>
                             <p className="product-subtitle">{product.benefit}</p>
-                            <div className="product-cta">View Product</div>
+                            <a href="#recipes" className="product-cta">View Recipes</a>
                         </div>
                     ))}
                 </div>

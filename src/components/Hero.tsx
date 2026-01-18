@@ -54,7 +54,7 @@ export default function Hero() {
 
                         <div className="reveal" style={{ transitionDelay: '0.2s' }}>
                             <p className="hero-p">
-                                Premium foxnuts, roasted nuts & organic seeds crafted for consistent everyday energy. Zero additives, just pure nature.
+                                Premium roasted makhana, protein nuts & organic seeds crafted for clean, everyday energy. Zero additives, just pure nature by Three Fields.
                             </p>
                         </div>
                     </div>
@@ -64,8 +64,11 @@ export default function Hero() {
                         <div className="product-focal-point reveal product-animation">
                             <img
                                 src="/hero-packets.png"
-                                alt="Premium Three Fields Packets"
+                                alt="Three Fields Premium Healthy Snacks Collection - Roasted Makhana and Seeds"
                                 className="product-image-premium"
+                                loading="eager"
+                                width={800}
+                                height={600}
                             />
 
                             {/* Bold Handcrafted Tagline */}

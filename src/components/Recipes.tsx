@@ -62,13 +62,32 @@ export default function Recipes() {
 
     return (
         <section id="recipes" className="recipes-section" ref={sectionRef}>
+            {/* Structured Data for Recipes */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(recipes.map(r => ({
+                        "@context": "https://schema.org/",
+                        "@type": "Recipe",
+                        "name": r.title,
+                        "image": `https://threefields.com${r.image}`,
+                        "description": r.description,
+                        "recipeYield": r.servings,
+                        "prepTime": `PT${r.time.replace(' mins', 'M')}`,
+                        "author": {
+                            "@type": "Organization",
+                            "name": "Three Fields"
+                        }
+                    })))
+                }}
+            />
             <div className="recipes-container">
                 {/* Section Header */}
                 <div className="recipes-header reveal">
                     <div className="recipes-header-content">
                         <span className="recipes-eyebrow">Kitchen Chronicles</span>
                         <h2 className="recipes-title">
-                            Crafted for Your Lifestyle
+                            Healthy Makhana Recipes for Your Lifestyle
                         </h2>
                     </div>
                 </div>
@@ -85,8 +104,10 @@ export default function Recipes() {
                             <div className="recipe-image-wrapper">
                                 <img
                                     src={recipe.image}
-                                    alt={recipe.title}
+                                    alt={`How to make ${recipe.title} - A healthy snack by Three Fields`}
                                     loading="lazy"
+                                    width={400}
+                                    height={300}
                                 />
                             </div>
 
@@ -110,12 +131,12 @@ export default function Recipes() {
                                     </div>
                                 </div>
 
-                                <div className="recipe-card-cta">
-                                    View Full Recipe
+                                <a href="#products" className="recipe-card-cta">
+                                    Shop Ingredients
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     ))}
@@ -124,7 +145,7 @@ export default function Recipes() {
                 {/* Mobile View All Link */}
                 <div className="mt-12 md:hidden reveal" style={{ transitionDelay: '0.4s' }}>
                     <a href="#recipes" className="recipes-view-all">
-                        View All Recipes
+                        View All Healthy Recipes
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>

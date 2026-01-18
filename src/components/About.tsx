@@ -42,7 +42,7 @@ export default function About() {
                         {/* LEFT: Copy */}
                         <div className="story-text-content reveal">
                             <span className="story-eyebrow">Our Story</span>
-                            <h2 className="story-title">Three Friends.<br />One Shared Field.</h2>
+                            <h2 className="story-title">Three Friends.<br />Premium Healthy Snacks.</h2>
 
                             <div className="story-prose">
                                 <p>
@@ -52,7 +52,7 @@ export default function About() {
                                     On the same day, we made a choice. We walked away from the safety of the expected to build something honest.
                                 </p>
                                 <p>
-                                    Three Fields is our shared ground—where three diverse perspectives unite to craft real, meaningful food rooted in nature.
+                                    Three Fields is our shared ground—where three diverse perspectives unite to craft real, meaningful food rooted in nature. Explore our <a href="#products" className="text-[#C9A84E] underline decoration-skip-ink">healthy snack collection</a> today.
                                 </p>
                             </div>
                         </div>
